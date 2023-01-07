@@ -1,0 +1,109 @@
+@import "../../App";
+
+.home {
+  width: 100%;
+  height: calc(200vh - 10rem);
+  background: url("../../assets/home-bg.svg");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+
+  .container {
+    display: flex;
+    align-items: center;
+
+    .left {
+      // margin-top: 9.8rem;
+      flex: 1;
+
+      small {
+        text-transform: uppercase;
+        color: $text-white;
+        margin-bottom: -0.5rem;
+        display: block;
+      }
+
+      h1 {
+        color: $primary;
+        font-size: 6.8rem;
+      }
+
+      h3 {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 3rem;
+        font-weight: 400;
+        margin-bottom: 3rem;
+      }
+
+      p {
+        color: $text-para;
+        width: 80%;
+        margin-bottom: 4rem;
+      }
+
+      .link {
+        font-size: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        transition: all 0.3s;
+
+        svg {
+          color: $primary;
+          font-size: 2.2rem;
+        }
+
+        &:hover {
+          gap: 1.6rem;
+        }
+      }
+
+      .social-links {
+        color: #ffffffcc;
+        margin-top: 6rem;
+        display: flex;
+        align-items: center;
+        gap: 2.6rem;
+
+        span {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+        }
+      }
+    }
+
+    .right {
+      flex: 1;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+
+      img {
+        width: 90%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .home {
+    .container {
+      display: flex;
+      flex-direction: column-reverse;
+
+      .left {
+      }
+
+      .right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 70%;
+        }
+      }
+    }
+  }
+}

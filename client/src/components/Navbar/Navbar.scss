@@ -1,0 +1,125 @@
+@import "../../App";
+
+.navbar {
+  z-index: 99;
+  position: sticky;
+  top: 0;
+  left: 0;
+  transition: 0.3s all;
+
+  &.scrolled {
+    background-color: rgb(0, 0, 0, 0.2);
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.8rem 0;
+    transition: 0.3s all;
+
+    &.scrolled {
+      padding: 1rem 0;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 2.6rem;
+
+      span {
+        color: $primary;
+      }
+    }
+
+    .lists {
+      display: flex;
+      align-items: center;
+      gap: 4.8rem;
+      font-size: 1.8rem;
+    }
+
+    .link {
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        background-color: $primary;
+        bottom: -5px;
+        left: 0;
+        transition: 0.3s all;
+      }
+
+      &.active {
+        color: $primary;
+
+        &::after {
+          width: 105%;
+        }
+      }
+
+      &:hover::after {
+        content: "";
+        width: 105%;
+      }
+    }
+
+    .mobile-nav-btn {
+      display: none;
+      color: #fff;
+      font-size: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .nav-list-btn {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    &.scrolled {
+      background: none;
+    }
+
+    .container {
+      .lists {
+        background: #555;
+        position: fixed;
+        width: 50%;
+        height: 100vh;
+        right: 0;
+        top: 0;
+        display: none;
+        padding: 20% 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transform: translateX(100%);
+        transition: all 0.3s;
+
+        &.show {
+          transform: translateX(0);
+          opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
+        }
+      }
+
+      .mobile-nav-btn {
+        display: inline-block;
+        z-index: 100;
+      }
+    }
+  }
+}

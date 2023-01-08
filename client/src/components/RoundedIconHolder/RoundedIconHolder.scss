@@ -1,0 +1,35 @@
+.roundedIconHolder {
+  width: 12.8rem;
+  height: 12.8rem;
+  background: #20272f;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: fit-content;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .roundedIconHolder {
+    width: 10rem;
+    height: 10rem;
+
+    img {
+      height: 5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .roundedIconHolder {
+    width: 8rem;
+    height: 8rem;
+
+    img {
+      height: 4rem;
+    }
+  }
+}

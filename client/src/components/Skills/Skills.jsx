@@ -4,7 +4,7 @@ import { skillIcons } from "../../data";
 
 const Skills = () => {
   return (
-    <section className="skills">
+    <section className="skills" id="skills">
       <div className="container">
         <div className="top">
           <h2>Skills</h2>
@@ -13,7 +13,7 @@ const Skills = () => {
             technologies:
           </p>
         </div>
-        <div className="body">
+        <div className="bottom">
           {skillIcons.map((icon) => (
             <RoundedIconHolder
               logo={icon.url}

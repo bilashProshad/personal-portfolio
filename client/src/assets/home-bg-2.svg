@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" preserveAspectRatio="none">
+  <g fill="none" mask="url(&quot;#SvgjsMask1214&quot;)">
+    <path fill="rgba(32, 39, 47, 1)" d="M0 0h1920v1080H0z"/>
+    <!-- <path fill="rgba(0, 191, 150, 0.2)" d="M1131.202 580.167c67.199-2.088 107.483-66.501 140.721-124.941 32.708-57.508 66.011-124.218 33.886-182.054-32.718-58.903-107.39-75.969-174.607-71.288-59.018 4.11-106.701 42.187-137.022 92.987-31.263 52.378-46.117 114.612-19.708 169.598 30.132 62.737 87.166 117.86 156.73 115.698" class="triangle-float2"/> -->
+    <!-- <path fill="rgba(0, 191, 150, 0.2)" d="m1090.311 319.739 161.052 230.006 230.006-161.052-161.052-230.006zm820.031 752.864c57.206 1.053 113.9-23.269 142.691-72.713 28.956-49.728 22.399-111.253-6.641-160.932-28.75-49.184-79.096-84.508-136.05-83.177-55.001 1.286-98.578 41.29-125.463 89.29-26.182 46.744-34.282 102.811-8.412 149.728 26.712 48.443 78.564 76.786 133.875 77.804" class="triangle-float2"/> -->
+    <path fill="rgba(0, 191, 150, 0.2)" d="M1081.71 627.44a327.07 327.07 0 1 0 654.14 0 327.07 327.07 0 1 0-654.14 0z" style="animation:float1 5s infinite"/>
+    <path fill="rgba(0, 191, 150, 0.2)" d="m1339.387 409.051-86.737-163.126-163.126 86.736 86.736 163.126z" style="animation:float3 6s infinite"/>
+  </g>
+  <defs>
+    <style>
+      @keyframes float1{0%,to{transform:translate(0,0)}50%{transform:translate(-10px,0)}}@keyframes float2{0%,to{transform:translate(0,0)}50%{transform:translate(-5px,-5px)}}@keyframes float3{0%,to{transform:translate(0,0)}50%{transform:translate(0,-10px)}}.triangle-float2{animation:float2 4s infinite}
+    </style>
+    <mask id="SvgjsMask1214">
+      <path fill="#fff" d="M0 0h1920v1080H0z"/>
+    </mask>
+  </defs>
+</svg>

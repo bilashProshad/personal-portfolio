@@ -27,7 +27,7 @@ const Home = () => {
             </a>
           </div>
           <div className="social-links">
-            Check Out My{" "}
+            <span className="label">Check Out My</span>
             <span>
               <IconLinkRound href="linkin.com">
                 <GrLinkedinOption />

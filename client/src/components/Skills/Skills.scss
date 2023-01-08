@@ -61,6 +61,7 @@
 
 @media screen and (max-width: 480px) {
   .skills {
+    min-height: 100vh;
     .container {
       .body {
         grid-template-columns: repeat(3, auto);

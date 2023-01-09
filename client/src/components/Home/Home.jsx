@@ -29,13 +29,13 @@ const Home = () => {
           <div className="social-links">
             <span className="label">Check Out My</span>
             <span>
-              <IconLinkRound href="linkin.com">
+              <IconLinkRound href="https://www.linkedin.com/in/bilash-prosad/">
                 <GrLinkedinOption />
               </IconLinkRound>
-              <IconLinkRound href="github.com">
+              <IconLinkRound href="https://github.com/bilashProshad">
                 <TbBrandGithub />
               </IconLinkRound>
-              <IconLinkRound href="facebook.com">
+              <IconLinkRound href="https://www.facebook.com/bilash.proshad">
                 <FaFacebookF />
               </IconLinkRound>
             </span>

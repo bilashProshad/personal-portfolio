@@ -6,11 +6,12 @@
   border: 1px solid $primary;
   padding: 1.8rem 3.4rem;
   font-size: 1.8rem;
-  margin-left: 1.8rem;
   position: relative;
   background-color: transparent;
   transition: 0.3s ease-in-out;
+  overflow: hidden;
   cursor: pointer;
+  outline: none;
 
   span {
     z-index: 1;
@@ -18,12 +19,12 @@
 
   &::before {
     content: "";
-    width: 0%;
+    width: 0;
     height: 100%;
     position: absolute;
     background-color: $primary;
-    top: 0;
-    left: 0;
+    top: 0rem;
+    left: 0rem;
     z-index: -1;
     transition: 0.3s ease-in-out;
   }
@@ -34,7 +35,7 @@
 
   &:hover::before {
     content: "";
-    width: 100%;
+    width: 101%;
     height: 100%;
     position: absolute;
   }

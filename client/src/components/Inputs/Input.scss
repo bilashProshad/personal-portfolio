@@ -1,0 +1,29 @@
+@import "../../App";
+
+.input {
+  font-family: inherit;
+  background: none;
+  color: #fff;
+  padding: 2rem;
+  padding-left: 3rem;
+  border: 1px solid $primary;
+  border-radius: 15px;
+  outline: none;
+  font-size: 1.6rem;
+  transition: all 0.3s ease-in;
+  background-color: $bg-input;
+
+  &:focus {
+    outline: 1px solid $primary;
+  }
+
+  &.error {
+    border: 1px solid #e02731;
+    background-color: #e0273015;
+    transition: all 0.3s ease-in;
+
+    &:focus {
+      outline: 1px solid #e02731;
+    }
+  }
+}

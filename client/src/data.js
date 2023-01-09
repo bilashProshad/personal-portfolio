@@ -90,3 +90,48 @@ export const skillIcons = [
     name: "Bootstrap",
   },
 ];
+
+export const projects = [
+  {
+    id: 1,
+    title: "Ecommerce Website",
+    codeLink: "https://github.com",
+    demoLink: "https://demo.com",
+    image: "/images/1.jpg",
+  },
+  {
+    id: 2,
+    title: "Chat App",
+    codeLink: "https://github.com",
+    demoLink: "https://demo.com",
+    image: "/images/2.jpg",
+  },
+  {
+    id: 3,
+    title: "Social Media",
+    codeLink: "https://github.com",
+    demoLink: "https://demo.com",
+    image: "/images/3.jpg",
+  },
+  {
+    id: 4,
+    title: "Video Sharing",
+    codeLink: "https://github.com",
+    demoLink: "https://demo.com",
+    image: "/images/4.jpg",
+  },
+  {
+    id: 5,
+    title: "Disney+ Clone",
+    codeLink: "https://github.com",
+    demoLink: "https://demo.com",
+    image: "/images/5.jpg",
+  },
+  {
+    id: 6,
+    title: "Linkedin Clone",
+    codeLink: "https://github.com",
+    demoLink: "https://demo.com",
+    image: "/images/6.jpg",
+  },
+];

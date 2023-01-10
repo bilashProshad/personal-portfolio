@@ -1,4 +1,5 @@
 import Card from "../Card/Card";
+import SectionHeader from "../SectionHeader/SectionHeader";
 import "./Services.scss";
 
 const Services = () => {
@@ -6,8 +7,10 @@ const Services = () => {
     <section className="services" id="services">
       <div className="container">
         <div className="top">
-          <h2>Services</h2>
-          <p>As a web developer, I offer a wide range of services:</p>
+          <SectionHeader
+            title="Services"
+            description="As a web developer, I offer a wide range of services:"
+          />
         </div>
         <div className="bottom">
           <Card

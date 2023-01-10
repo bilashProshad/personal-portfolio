@@ -42,6 +42,7 @@
         color: $text-para;
         width: 80%;
         margin-bottom: 4rem;
+        line-height: 1.4;
       }
 
       .link {
@@ -124,6 +125,14 @@
       padding-top: 0;
 
       .left {
+        h1 {
+          font-size: 4.8rem;
+        }
+
+        h3 {
+          font-size: 2.2rem;
+        }
+
         p {
           width: 100%;
         }
@@ -149,6 +158,30 @@
         img {
           width: 60%;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .home .container .left {
+    small {
+      font-size: 1.2rem;
+    }
+
+    h1 {
+      font-size: 4rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    .link {
+      font-size: 1.6rem;
+
+      svg {
+        font-size: 1.6rem;
       }
     }
   }

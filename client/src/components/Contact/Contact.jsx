@@ -3,14 +3,17 @@ import Form from "../Form/Form";
 import Input from "../Inputs/Input";
 import TextArea from "../Inputs/TextArea";
 import Button from "../Button/Button";
+import SectionHeader from "../SectionHeader/SectionHeader";
 
 const Contact = () => {
   return (
     <section className="contact" id="contact">
       <div className="container">
         <div className="top">
-          <h2>Contact</h2>
-          <p>If you have a project in mind or just want to say hello: </p>
+          <SectionHeader
+            title="Contact"
+            description="If you have a project in mind or just want to say hello:"
+          />
         </div>
 
         <div className="bottom">

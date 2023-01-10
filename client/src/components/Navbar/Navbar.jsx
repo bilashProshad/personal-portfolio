@@ -3,6 +3,7 @@ import { useState } from "react";
 import Button from "../Button/Button";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import "./Navbar.scss";
+import Logo from "../Logo/Logo";
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -30,9 +31,7 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled && "scrolled"}`}>
       <div className={`container ${scrolled && "scrolled"}`}>
-        <a href="#home" className="logo link">
-          B<span>P.</span>
-        </a>
+        <Logo href="#home" />
 
         <ul className={`lists ${showNav && "show"}`}>
           <li>

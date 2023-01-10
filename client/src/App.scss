@@ -25,6 +25,8 @@ body {
   background-color: $bg;
   font-size: 1.6rem;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {

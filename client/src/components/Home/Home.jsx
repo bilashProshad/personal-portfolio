@@ -5,15 +5,62 @@ import { TbBrandGithub } from "react-icons/tb";
 import { FaFacebookF } from "react-icons/fa";
 import bilashImage from "../../assets/bilash-prosad.svg";
 import IconLinkRound from "../IconLinkRound/IconLinkRound";
+import { useCallback, useEffect, useState } from "react";
 
 const Home = () => {
+  const [loopNum, setLoopNum] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [index, setIndex] = useState(1);
+  const [text, setText] = useState("");
+  const [delta, setDelta] = useState(300 - Math.random() * 100);
+  const period = 1000;
+
+  const tick = useCallback(() => {
+    const toRotate = ["Web Developer", "Web Designer"];
+
+    let i = loopNum % toRotate.length;
+    let fullText = toRotate[i];
+    let updatedText = isDeleting
+      ? fullText.substring(0, text.length - 1)
+      : fullText.substring(0, text.length + 1);
+
+    setText(updatedText);
+
+    if (isDeleting) {
+      setDelta((prevDelta) => prevDelta / 2);
+    }
+
+    if (!isDeleting && updatedText === fullText) {
+      setIsDeleting(true);
+      setIndex((pervIndex) => pervIndex - 1);
+      setDelta(period);
+    } else if (isDeleting && updatedText === "") {
+      setIsDeleting(false);
+      setLoopNum(loopNum + 1);
+      setIndex(1);
+      setDelta(500);
+    } else {
+      setIndex((prevIndex) => prevIndex + 1);
+    }
+  }, [isDeleting, loopNum, text.length]);
+
+  useEffect(() => {
+    let ticker = setInterval(() => {
+      tick();
+    }, delta);
+
+    return () => {
+      clearInterval(ticker);
+    };
+  }, [delta, text, tick]);
+
   return (
     <section className="home" id="home">
       <div className="container">
         <div className="left">
           <small>This is me</small>
           <h1>Bilash Prosad</h1>
-          <h3>I'm a Web Developer</h3>
+          <h3>I'm a {text}</h3>
           <p>
             I am a web developer with a passion for creating intuitive and
             user-friendly websites. In my spare time, I enjoy staying up-to-date

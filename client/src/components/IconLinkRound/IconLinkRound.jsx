@@ -1,10 +1,16 @@
 import "./IconLinkRound.scss";
+import { motion } from "framer-motion";
 
-const IconLinkRound = ({ children, href, className, ...rest }) => {
+const IconLinkRound = ({ children, href, className, delay = 0, ...rest }) => {
   return (
-    <a href={href} className={`icon-link ${className}`} {...rest}>
+    <motion.a
+      href={href}
+      className={`icon-link ${className}`}
+      transition={{ delay: delay, duration: 0.3 }}
+      {...rest}
+    >
       {children}
-    </a>
+    </motion.a>
   );
 };
 

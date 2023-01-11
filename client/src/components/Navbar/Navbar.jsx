@@ -4,6 +4,7 @@ import Button from "../Button/Button";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import "./Navbar.scss";
 import Logo from "../Logo/Logo";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -29,7 +30,15 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`navbar ${scrolled && "scrolled"}`}>
+    <motion.nav
+      className={`navbar ${scrolled && "scrolled"}`}
+      initial={{
+        opacity: 0,
+      }}
+      animate={{
+        opacity: 1,
+      }}
+    >
       <div className={`container ${scrolled && "scrolled"}`}>
         <Logo href="#home" />
 
@@ -91,7 +100,7 @@ const Navbar = () => {
           {showNav && <AiOutlineClose onClick={() => setShowNav(false)} />}
         </ul>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

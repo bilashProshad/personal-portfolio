@@ -6,6 +6,7 @@ import { FaFacebookF } from "react-icons/fa";
 import bilashImage from "../../assets/bilash-prosad.svg";
 import IconLinkRound from "../IconLinkRound/IconLinkRound";
 import { useCallback, useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const Home = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -57,7 +58,16 @@ const Home = () => {
   return (
     <section className="home" id="home">
       <div className="container">
-        <div className="left">
+        <motion.div
+          className="left"
+          initial={{
+            scale: 0,
+          }}
+          animate={{
+            scale: 1,
+          }}
+          transition={{ duration: 0.3 }}
+        >
           <small>This is me</small>
           <h1>Bilash Prosad</h1>
           <h3>I'm a {text}</h3>
@@ -76,22 +86,64 @@ const Home = () => {
           <div className="social-links">
             <span className="label">Check Out My</span>
             <span>
-              <IconLinkRound href="https://www.linkedin.com/in/bilash-prosad/">
+              <IconLinkRound
+                href="https://www.linkedin.com/in/bilash-prosad/"
+                initial={{
+                  x: "-100vw",
+                  opacity: 0,
+                }}
+                animate={{
+                  x: 0,
+                  opacity: 1,
+                }}
+                delay={0.4}
+              >
                 <GrLinkedinOption />
               </IconLinkRound>
-              <IconLinkRound href="https://github.com/bilashProshad">
+              <IconLinkRound
+                href="https://github.com/bilashProshad"
+                initial={{
+                  x: "-100vw",
+                  opacity: 0,
+                }}
+                animate={{
+                  x: 0,
+                  opacity: 1,
+                }}
+                delay={0.7}
+              >
                 <TbBrandGithub />
               </IconLinkRound>
-              <IconLinkRound href="https://www.facebook.com/bilash.proshad">
+              <IconLinkRound
+                href="https://www.facebook.com/bilash.proshad"
+                initial={{
+                  x: "-100vw",
+                  opacity: 0,
+                }}
+                animate={{
+                  x: 0,
+                  opacity: 1,
+                }}
+                delay={1}
+              >
                 <FaFacebookF />
               </IconLinkRound>
             </span>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="right">
+        <motion.div
+          className="right"
+          initial={{
+            scale: 0,
+          }}
+          animate={{
+            scale: 1,
+          }}
+          transition={{ duration: 0.4 }}
+        >
           <img src={bilashImage} alt="bilash prosad" />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

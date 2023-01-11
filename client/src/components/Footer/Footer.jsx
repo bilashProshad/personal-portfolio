@@ -10,21 +10,38 @@ import {
   MdOutlineMail,
 } from "react-icons/md";
 import IconLinkRound from "../IconLinkRound/IconLinkRound";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
     <section className="footer">
       <div className="container">
         <div className="top">
-          <div className="logo-container">
+          <motion.div
+            className="logo-container"
+            initial={{
+              opacity: 0,
+            }}
+            whileInView={{
+              opacity: 1,
+            }}
+          >
             <Logo className={`logo`} />
             <p>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta
               delectus placeat ducimus magnam ut quos dolores iusto praesentium.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="footer-links">
+          <motion.div
+            className="footer-links"
+            initial={{
+              opacity: 0,
+            }}
+            whileInView={{
+              opacity: 1,
+            }}
+          >
             <h3>Portfolio</h3>
             <ul>
               <li>
@@ -43,9 +60,17 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div>
+          </motion.div>
 
-          <div className="footer-links">
+          <motion.div
+            className="footer-links"
+            initial={{
+              opacity: 0,
+            }}
+            whileInView={{
+              opacity: 1,
+            }}
+          >
             <h3>Services</h3>
             <ul>
               <li>
@@ -64,9 +89,17 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div>
+          </motion.div>
 
-          <div className="footer-links questions">
+          <motion.div
+            className="footer-links questions"
+            initial={{
+              opacity: 0,
+            }}
+            whileInView={{
+              opacity: 1,
+            }}
+          >
             <h3>Have a Questions?</h3>
             <ul>
               <li>
@@ -85,23 +118,64 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div>
+          </motion.div>
         </div>
 
         <div className="bottom">
           <div>
-            <IconLinkRound href="https://www.linkedin.com/in/bilash-prosad/">
+            <IconLinkRound
+              href="https://www.linkedin.com/in/bilash-prosad/"
+              initial={{
+                x: "-100%",
+                opacity: 0,
+              }}
+              whileInView={{
+                x: 0,
+                opacity: 1,
+              }}
+            >
               <GrLinkedinOption />
             </IconLinkRound>
-            <IconLinkRound href="https://github.com/bilashProshad">
+            <IconLinkRound
+              href="https://github.com/bilashProshad"
+              initial={{
+                x: "-200%",
+                opacity: 0,
+              }}
+              whileInView={{
+                x: 0,
+                opacity: 1,
+              }}
+              delay={0.3}
+            >
               <TbBrandGithub />
             </IconLinkRound>
-            <IconLinkRound href="https://www.facebook.com/bilash.proshad">
+            <IconLinkRound
+              href="https://www.facebook.com/bilash.proshad"
+              initial={{
+                x: "-300%",
+                opacity: 0,
+              }}
+              whileInView={{
+                x: 0,
+                opacity: 1,
+              }}
+              delay={0.6}
+            >
               <FaFacebookF />
             </IconLinkRound>
           </div>
 
-          <p>&copy; Copyright - Bilash Prosad | All Rights Reserved</p>
+          <motion.p
+            initial={{
+              opacity: 0,
+            }}
+            whileInView={{
+              opacity: 1,
+            }}
+          >
+            &copy; Copyright - Bilash Prosad | All Rights Reserved
+          </motion.p>
         </div>
       </div>
     </section>

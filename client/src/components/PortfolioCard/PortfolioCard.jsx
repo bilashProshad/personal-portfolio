@@ -1,10 +1,20 @@
 import "./PortfolioCard.scss";
 import { AiOutlineEye } from "react-icons/ai";
 import { FiCode } from "react-icons/fi";
+import { motion } from "framer-motion";
 
 const PortfolioCard = ({ title, codeLink, demoLink, image }) => {
   return (
-    <div className="portfolioCard">
+    <motion.div
+      className="portfolioCard"
+      initial={{
+        opacity: 0,
+      }}
+      whileInView={{
+        opacity: 1,
+      }}
+      transition={{ duration: 0.3 }}
+    >
       <img src={image} alt={title} />
       <div>
         <h3>{title}</h3>
@@ -17,7 +27,7 @@ const PortfolioCard = ({ title, codeLink, demoLink, image }) => {
           </a>
         </span>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

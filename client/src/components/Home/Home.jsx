@@ -1,5 +1,4 @@
 import "./Home.scss";
-import { FiArrowRightCircle } from "react-icons/fi";
 import { GrLinkedinOption } from "react-icons/gr";
 import { TbBrandGithub } from "react-icons/tb";
 import { FaFacebookF } from "react-icons/fa";
@@ -7,11 +6,12 @@ import bilashImage from "../../assets/bilash-prosad.svg";
 import IconLinkRound from "../IconLinkRound/IconLinkRound";
 import { useCallback, useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import resume from "../../assets/resume.pdf";
 
 const Home = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [index, setIndex] = useState(1);
+  // const [index, setIndex] = useState(1);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 1000;
@@ -33,15 +33,15 @@ const Home = () => {
 
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
-      setIndex((pervIndex) => pervIndex - 1);
+      // setIndex((pervIndex) => pervIndex - 1);
       setDelta(period);
     } else if (isDeleting && updatedText === "") {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
-      setIndex(1);
+      // setIndex(1);
       setDelta(500);
     } else {
-      setIndex((prevIndex) => prevIndex + 1);
+      // setIndex((prevIndex) => prevIndex + 1);
     }
   }, [isDeleting, loopNum, text.length]);
 
@@ -79,8 +79,8 @@ const Home = () => {
             developer.
           </p>
           <div>
-            <a href="#contact" className="link">
-              Let's Connect <FiArrowRightCircle />
+            <a href={resume} download className="button-filled">
+              Download CV
             </a>
           </div>
           <div className="social-links">

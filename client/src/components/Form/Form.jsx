@@ -1,4 +1,4 @@
-import React from "react";
+import "./Form.scss";
 
 const Form = ({ className, children, ...rest }) => {
   return (

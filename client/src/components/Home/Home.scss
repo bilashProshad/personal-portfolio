@@ -45,23 +45,6 @@
         line-height: 1.4;
       }
 
-      .link {
-        font-size: 2rem;
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        transition: all 0.3s;
-
-        svg {
-          color: $primary;
-          font-size: 2.2rem;
-        }
-
-        &:hover {
-          gap: 1.6rem;
-        }
-      }
-
       .social-links {
         color: #ffffffcc;
         margin-top: 6rem;

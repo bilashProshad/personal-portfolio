@@ -20,20 +20,46 @@
         div {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          gap: 2rem;
+          row-gap: 3rem;
+          column-gap: 2rem;
+
+          span {
+            position: relative;
+
+            .input {
+              width: 100%;
+            }
+
+            .error-text {
+              position: absolute;
+              bottom: -2.2rem;
+              left: 0;
+              font-size: 1.4rem;
+              color: #e02731;
+            }
+          }
         }
 
-        .textarea {
-          margin: 2rem 0;
-          width: 100%;
+        span {
+          position: relative;
           display: block;
-          height: 20rem;
+          .textarea {
+            margin: 3rem 0;
+            width: 100%;
+            display: block;
+            height: 20rem;
+          }
+          .error-text {
+            position: absolute;
+            bottom: -2.2rem;
+            left: 0;
+            font-size: 1.4rem;
+            color: #e02731;
+          }
         }
 
-        .submit-btn {
-          border-radius: 15px;
-          padding: 1.2rem 3rem;
-          background-color: $bg-input;
+        .button-filled {
+          color: white;
         }
       }
     }

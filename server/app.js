@@ -7,7 +7,13 @@ const path = require("path");
 const app = express();
 
 // server used to send emails
-app.use(cors());
+app.use(
+  cors({
+    credentials: true,
+    origin: process.env.FRONTEND_URL,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+  })
+);
 app.use(express.json());
 
 app.use("/api/contact", contactRoutes);

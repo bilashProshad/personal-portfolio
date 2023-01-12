@@ -36,7 +36,7 @@ const contact = (req, res) => {
 
   const mail = {
     from: name,
-    to: "pbilash64@gmail.com",
+    to: process.env.MAIL_TO,
     subject: "Contact Form Submission - Portfolio",
     html: `<p>Name: ${name}</p>
           <p>Email: ${email}</p>

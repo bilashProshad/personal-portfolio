@@ -55,7 +55,7 @@ const Contact = () => {
       return;
     }
 
-    const response = await fetch(`${process.env.REACT_APP_API}/contact`, {
+    const response = await fetch(`/contact`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -2,7 +2,7 @@ import "./Home.scss";
 import { GrLinkedinOption } from "react-icons/gr";
 import { TbBrandGithub } from "react-icons/tb";
 import { FaFacebookF } from "react-icons/fa";
-import bilashImage from "../../assets/bilash-prosad.svg";
+import bilashImage from "../../assets/bilash-prosad.png";
 import IconLinkRound from "../IconLinkRound/IconLinkRound";
 import { useCallback, useEffect, useState } from "react";
 import { motion } from "framer-motion";

@@ -8,13 +8,7 @@ const ButtonFilled = ({ children, className, loading, ...rest }) => {
       disabled={loading}
       {...rest}
     >
-      {loading ? (
-        <span>
-          <BiLoaderAlt />
-        </span>
-      ) : (
-        <span>{children}</span>
-      )}
+      <span>{loading ? <BiLoaderAlt /> : children}</span>
     </button>
   );
 };

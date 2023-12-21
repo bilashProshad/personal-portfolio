@@ -2,6 +2,7 @@
 
 .button-filled {
   background-color: $primary;
+
   padding: 1.2rem 3.2rem;
   font-weight: 500;
   font-size: 1.8rem;
@@ -9,9 +10,6 @@
   transition: all 0.3s;
   border: none;
   outline: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: fit-content;
   cursor: pointer;
 
@@ -21,6 +19,12 @@
 
   span {
     width: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    font-size: 1.8rem;
+    height: 2rem;
   }
 
   svg {

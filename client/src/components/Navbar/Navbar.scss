@@ -35,25 +35,29 @@
       &::after {
         content: "";
         position: absolute;
-        width: 0%;
+        width: 105%;
         height: 2px;
         background-color: $primary;
         bottom: -5px;
         left: 0;
-        transition: 0.3s all;
+        transform: scale3d(0, 1, 1);
+        transform-origin: right;
+        transition: transform 0.6s cubic-bezier(0.5, 0.5, 0.3, 1);
       }
 
       &.active {
         color: $primary;
 
         &::after {
-          width: 105%;
+          transform: scale3d(1, 1, 1);
+          transform-origin: left;
         }
       }
 
       &:hover::after {
         content: "";
-        width: 105%;
+        transform: scale3d(1, 1, 1);
+        transform-origin: left;
       }
     }
 

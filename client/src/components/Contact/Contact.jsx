@@ -6,8 +6,9 @@ import ButtonFilled from "../ButtonFilled/ButtonFilled";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import { useAlert } from "react-alert";
 import { useInputValidate } from "../../hooks/useInputValidate";
+import { useSetActiveLink } from "../../hooks/useSetActiveLink";
 
-const Contact = () => {
+const Contact = ({ setActiveLink }) => {
   const [
     firstName,
     setFirstName,
@@ -78,8 +79,13 @@ const Contact = () => {
     }
   };
 
+  const sectionRef = useSetActiveLink({
+    setState: setActiveLink,
+    activeLinkId: "contact",
+  });
+
   return (
-    <section className="contact" id="contact">
+    <section className="contact" id="contact" ref={sectionRef}>
       <div className="container">
         <div className="top">
           <SectionHeader

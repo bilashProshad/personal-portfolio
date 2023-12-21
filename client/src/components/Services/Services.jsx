@@ -1,10 +1,16 @@
+import { useSetActiveLink } from "../../hooks/useSetActiveLink";
 import Card from "../Card/Card";
 import SectionHeader from "../SectionHeader/SectionHeader";
 import "./Services.scss";
 
-const Services = () => {
+const Services = ({ setActiveLink }) => {
+  const sectionRef = useSetActiveLink({
+    setState: setActiveLink,
+    activeLinkId: "services",
+  });
+
   return (
-    <section className="services" id="services">
+    <section className="services" id="services" ref={sectionRef}>
       <div className="container">
         <div className="top">
           <SectionHeader

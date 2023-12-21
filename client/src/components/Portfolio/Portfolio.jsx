@@ -2,10 +2,16 @@ import PortfolioCard from "../PortfolioCard/PortfolioCard";
 import "./Portfolio.scss";
 import { projects } from "../../data";
 import SectionHeader from "../SectionHeader/SectionHeader";
+import { useSetActiveLink } from "../../hooks/useSetActiveLink";
 
-const Portfolio = () => {
+const Portfolio = ({ setActiveLink }) => {
+  const sectionRef = useSetActiveLink({
+    setState: setActiveLink,
+    activeLinkId: "portfolio",
+  });
+
   return (
-    <section className="portfolio" id="portfolio">
+    <section className="portfolio" id="portfolio" ref={sectionRef}>
       <div className="container">
         <div className="top">
           <SectionHeader

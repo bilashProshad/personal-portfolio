@@ -2,10 +2,16 @@ import "./Skills.scss";
 import RoundedIconHolder from "../RoundedIconHolder/RoundedIconHolder";
 import { skillIcons } from "../../data";
 import SectionHeader from "../SectionHeader/SectionHeader";
+import { useSetActiveLink } from "../../hooks/useSetActiveLink";
 
-const Skills = () => {
+const Skills = ({ setActiveLink }) => {
+  const sectionRef = useSetActiveLink({
+    setState: setActiveLink,
+    activeLinkId: "skills",
+  });
+
   return (
-    <section className="skills" id="skills">
+    <section className="skills" id="skills" ref={sectionRef}>
       <div className="container">
         <div className="top">
           <SectionHeader

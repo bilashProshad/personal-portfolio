@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { useEffect } from "react";
 import { useState } from "react";
 import Button from "../Button/Button";
@@ -6,8 +7,7 @@ import "./Navbar.scss";
 import Logo from "../Logo/Logo";
 import { motion } from "framer-motion";
 
-const Navbar = () => {
-  const [activeLink, setActiveLink] = useState("home");
+const Navbar = ({ activeLink, setActiveLink }) => {
   const [scrolled, setScrolled] = useState(false);
   const [showNav, setShowNav] = useState(false);
 
@@ -47,7 +47,7 @@ const Navbar = () => {
             <a
               className={`link ${activeLink === "home" && "active"}`}
               onClick={() => onUpdateActiveLink("home")}
-              href="#home"
+              href="#"
             >
               Home
             </a>

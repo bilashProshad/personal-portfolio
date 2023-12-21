@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.scss";
 import Contact from "./components/Contact/Contact";
 import Cursor from "./components/Cursor/Cursor";
@@ -9,15 +10,17 @@ import Services from "./components/Services/Services";
 import Skills from "./components/Skills/Skills";
 
 function App() {
+  const [activeLink, setActiveLink] = useState("home");
+
   return (
     <div className="App">
       <Cursor />
-      <Navbar />
-      <Home />
-      <Skills />
-      <Services />
-      <Portfolio />
-      <Contact />
+      <Navbar activeLink={activeLink} setActiveLink={setActiveLink} />
+      <Home setActiveLink={setActiveLink} />
+      <Skills setActiveLink={setActiveLink} />
+      <Services setActiveLink={setActiveLink} />
+      <Portfolio setActiveLink={setActiveLink} />
+      <Contact setActiveLink={setActiveLink} />
       <Footer />
     </div>
   );

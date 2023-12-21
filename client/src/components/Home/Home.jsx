@@ -7,8 +7,9 @@ import IconLinkRound from "../IconLinkRound/IconLinkRound";
 import { useCallback, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import resume from "../../assets/resume.pdf";
+import { useSetActiveLink } from "../../hooks/useSetActiveLink";
 
-const Home = () => {
+const Home = ({ setActiveLink }) => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   // const [index, setIndex] = useState(1);
@@ -55,8 +56,13 @@ const Home = () => {
     };
   }, [delta, text, tick]);
 
+  const sectionRef = useSetActiveLink({
+    setState: setActiveLink,
+    activeLinkId: "home",
+  });
+
   return (
-    <section className="home" id="home">
+    <section className="home" id="home" ref={sectionRef}>
       <div className="container">
         <motion.div
           className="left"

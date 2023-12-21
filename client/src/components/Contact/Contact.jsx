@@ -7,6 +7,7 @@ import SectionHeader from "../SectionHeader/SectionHeader";
 import { useAlert } from "react-alert";
 import { useInputValidate } from "../../hooks/useInputValidate";
 import { useSetActiveLink } from "../../hooks/useSetActiveLink";
+import { useState } from "react";
 
 const Contact = ({ setActiveLink }) => {
   const [
@@ -32,8 +33,11 @@ const Contact = ({ setActiveLink }) => {
 
   const alert = useAlert();
 
+  const [loading, setLoading] = useState(false);
+
   const submitHandler = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     if (firstNameError) {
       setFirstNameError(true);
@@ -77,6 +81,8 @@ const Contact = ({ setActiveLink }) => {
     } else {
       alert.show(data.message, { type: "error" });
     }
+
+    setLoading(false);
   };
 
   const sectionRef = useSetActiveLink({
@@ -177,7 +183,11 @@ const Contact = ({ setActiveLink }) => {
                 </span>
               )}
             </span>
-            <ButtonFilled type="submit" className="button-filled">
+            <ButtonFilled
+              type="submit"
+              className="button-filled"
+              loading={loading}
+            >
               Send
             </ButtonFilled>
           </Form>

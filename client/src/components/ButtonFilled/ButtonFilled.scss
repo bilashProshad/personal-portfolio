@@ -9,9 +9,34 @@
   transition: all 0.3s;
   border: none;
   outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  cursor: pointer;
 
   &:hover {
     background-color: hsl(167, 100%, 27%);
+  }
+
+  span {
+    width: 8rem;
+  }
+
+  svg {
+    // stroke-width: 1px;
+    transform: scale(1.5);
+    animation: rotate 1s linear infinite;
+
+    @keyframes rotate {
+      to {
+        rotate: 360deg;
+      }
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
   }
 }
 

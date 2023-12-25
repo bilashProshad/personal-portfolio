@@ -9,6 +9,21 @@ import { motion } from "framer-motion";
 import resume from "../../assets/resume.pdf";
 import { useSetActiveLink } from "../../hooks/useSetActiveLink";
 
+const textVariants = {
+  initial: {
+    x: -500,
+    opacity: 0,
+  },
+  animate: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
 const Home = ({ setActiveLink }) => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -66,32 +81,30 @@ const Home = ({ setActiveLink }) => {
       <div className="container">
         <motion.div
           className="left"
-          initial={{
-            scale: 0,
-          }}
-          animate={{
-            scale: 1,
-          }}
-          transition={{ duration: 0.3 }}
+          variants={textVariants}
+          initial="initial"
+          animate="animate"
         >
-          <small>This is me</small>
-          <h1>Bilash Prosad</h1>
-          <h3>I'm a {text}</h3>
-          <p>
+          <motion.small variants={textVariants}>This is me</motion.small>
+          <motion.h1 variants={textVariants}>Bilash Prosad</motion.h1>
+          <motion.h3 variants={textVariants}>I'm a {text}</motion.h3>
+          <motion.p variants={textVariants}>
             I am a web developer with a passion for creating intuitive and
             user-friendly websites. In my spare time, I enjoy staying up-to-date
             with the latest web development trends and technologies, and I am
             always looking for new challenges and opportunities to grow as a
             developer.
-          </p>
-          <div>
+          </motion.p>
+          <motion.div variants={textVariants}>
             <a href={resume} download className="button-filled">
               Download CV
             </a>
-          </div>
+          </motion.div>
           <div className="social-links">
-            <span className="label">Check Out My</span>
-            <span>
+            <motion.span variants={textVariants} className="label">
+              Check Out My
+            </motion.span>
+            <motion.span>
               <IconLinkRound
                 href="https://www.linkedin.com/in/bilash-prosad/"
                 initial={{
@@ -102,7 +115,7 @@ const Home = ({ setActiveLink }) => {
                   x: 0,
                   opacity: 1,
                 }}
-                delay={0.4}
+                delay={0.9}
               >
                 <GrLinkedinOption />
               </IconLinkRound>
@@ -116,7 +129,7 @@ const Home = ({ setActiveLink }) => {
                   x: 0,
                   opacity: 1,
                 }}
-                delay={0.7}
+                delay={1.2}
               >
                 <TbBrandGithub />
               </IconLinkRound>
@@ -130,23 +143,27 @@ const Home = ({ setActiveLink }) => {
                   x: 0,
                   opacity: 1,
                 }}
-                delay={1}
+                delay={1.5}
               >
                 <FaFacebookF />
               </IconLinkRound>
-            </span>
+            </motion.span>
           </div>
         </motion.div>
 
         <motion.div
           className="right"
           initial={{
-            scale: 0,
+            // scale: 0,
+            // x: 500,
+            opacity: 0,
           }}
           animate={{
-            scale: 1,
+            // scale: 1,
+            // x: 0,
+            opacity: 1,
           }}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.8 }}
         >
           <img src={bilashImage} alt="bilash prosad" />
         </motion.div>

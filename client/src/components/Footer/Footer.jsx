@@ -45,17 +45,29 @@ const Footer = () => {
             <h3>Portfolio</h3>
             <ul>
               <li>
-                <a href="https://www.google.com">
-                  <BsArrowRightShort /> <span>Ecommerce Website</span>
+                <a
+                  href="https://online-bazar-alpha.vercel.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <BsArrowRightShort /> <span>Online Bazar</span>
                 </a>
               </li>
               <li>
-                <a href="https://www.google.com">
-                  <BsArrowRightShort /> <span>Video Shareing</span>
+                <a
+                  href="https://vid-vibes.vercel.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <BsArrowRightShort /> <span>VidVibes</span>
                 </a>
               </li>
               <li>
-                <a href="https://www.google.com">
+                <a
+                  href="https://alpha-chat-app.vercel.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <BsArrowRightShort /> <span>Chat App</span>
                 </a>
               </li>

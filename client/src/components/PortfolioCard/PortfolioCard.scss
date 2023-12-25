@@ -6,86 +6,57 @@
   overflow: hidden;
   transition: all 0.4s ease-in;
   box-shadow: 0px 5px 20px rgba(0, 191, 150, 0.2);
+  background-color: $bg;
 
   img {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 16/9;
     object-fit: cover;
+    transition: all 0.4s ease;
+    cursor: pointer;
+
+    &:hover {
+      scale: 1.1;
+    }
   }
 
-  &::after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: linear-gradient(
-      90deg,
-      rgba(1, 139, 109, 0.81) 0%,
-      rgba(0, 0, 0, 0.71) 100%
-    );
-    z-index: 1;
-    transform: translateY(-100%);
-    transition: all 0.4s ease-in;
-  }
-
-  &:hover::after {
-    content: "";
-    transform: translateY(0);
-  }
-
-  div {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: $text-white;
-    transform: translateY(100%);
-    transition: all 0.4s;
-    opacity: 0;
-    z-index: 2;
+  .desc {
+    padding: 1rem;
 
     h3 {
-      cursor: default;
-      text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .tools {
+      margin-top: 0.5rem;
+      padding: 1rem;
+      padding-left: 0;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      img {
+        height: 3.2rem;
+        width: 3.2rem;
+        object-fit: contain;
+        cursor: pointer;
+      }
     }
 
     span {
-      margin-top: 2rem;
+      margin-top: 1rem;
       display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      font-size: 1.4rem;
+      gap: 1rem;
 
       a {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 0.5rem;
-        position: relative;
-        transition: all 0.4s;
-        text-shadow: 2px 2px 2px rgba(0, 0, 0, 1);
+        border: 2px solid #fff;
 
-        svg {
-          font-size: 2rem;
+        > svg {
+          color: #fff;
+          stroke-width: 3px;
+          transform: scale(1.3);
         }
       }
-
-      a:hover {
-        color: #11ffcb;
-      }
     }
-  }
-
-  &:hover div {
-    transform: translateY(0);
-    opacity: 1;
   }
 }

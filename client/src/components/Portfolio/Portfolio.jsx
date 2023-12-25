@@ -24,9 +24,11 @@ const Portfolio = ({ setActiveLink }) => {
             <PortfolioCard
               key={project.id}
               title={project.title}
+              description={project.description}
               image={project.image}
               codeLink={project.codeLink}
               demoLink={project.demoLink}
+              tools={project.tools}
             />
           ))}
         </div>

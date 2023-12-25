@@ -1,9 +1,17 @@
 import "./PortfolioCard.scss";
-import { AiOutlineEye } from "react-icons/ai";
-import { FiCode } from "react-icons/fi";
+import { FaGithub, FaChrome } from "react-icons/fa";
 import { motion } from "framer-motion";
+import Tippy from "@tippyjs/react";
+import IconLinkRound from "../IconLinkRound/IconLinkRound";
 
-const PortfolioCard = ({ title, codeLink, demoLink, image }) => {
+const PortfolioCard = ({
+  title,
+  codeLink,
+  demoLink,
+  image,
+  description,
+  tools = [],
+}) => {
   return (
     <motion.div
       className="portfolioCard"
@@ -15,16 +23,30 @@ const PortfolioCard = ({ title, codeLink, demoLink, image }) => {
       }}
       transition={{ duration: 0.3 }}
     >
-      <img src={image} alt={title} />
-      <div>
+      <a href={demoLink} target="_blank" rel="noreferrer">
+        <img src={image} alt={title} />
+      </a>
+      <div className="desc">
         <h3>{title}</h3>
+        <p>{description}</p>
+        <div className="tools">
+          {tools.length > 0 &&
+            tools.map((tool, i) => (
+              <Tippy content={tool.name} key={i}>
+                <img
+                  src={`/images/icons/${tool.icon}`}
+                  alt={`tool: ${tool.name}`}
+                />
+              </Tippy>
+            ))}
+        </div>
         <span>
-          <a href={demoLink}>
-            <AiOutlineEye /> Live Demo
-          </a>
-          <a href={codeLink}>
-            <FiCode /> Source Code
-          </a>
+          <IconLinkRound href={demoLink}>
+            <FaChrome />
+          </IconLinkRound>
+          <IconLinkRound href={codeLink}>
+            <FaGithub />
+          </IconLinkRound>
         </span>
       </div>
     </motion.div>

@@ -7,6 +7,7 @@ const IconLinkRound = ({ children, href, className, delay = 0, ...rest }) => {
       href={href}
       className={`icon-link ${className}`}
       transition={{ delay: delay, duration: 0.3 }}
+      target="_blank"
       {...rest}
     >
       {children}

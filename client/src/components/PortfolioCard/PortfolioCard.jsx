@@ -23,7 +23,7 @@ const PortfolioCard = ({
       }}
       transition={{ duration: 0.3 }}
     >
-      <a href={demoLink} target="_blank" rel="noreferrer">
+      <a href={demoLink} target="_blank" rel="noreferrer" title={"Demo"}>
         <img src={image} alt={title} />
       </a>
       <div className="desc">
@@ -41,10 +41,10 @@ const PortfolioCard = ({
             ))}
         </div>
         <span>
-          <IconLinkRound href={demoLink}>
+          <IconLinkRound href={demoLink} title={"Demo"}>
             <FaChrome />
           </IconLinkRound>
-          <IconLinkRound href={codeLink}>
+          <IconLinkRound href={codeLink} title={"Code"}>
             <FaGithub />
           </IconLinkRound>
         </span>

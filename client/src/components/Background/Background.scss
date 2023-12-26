@@ -29,6 +29,10 @@
       animation-delay: 3s;
       width: 60px;
       height: 60px;
+
+      @media screen and (max-width: 1200px) {
+        display: none;
+      }
     }
 
     &:nth-child(3) {
@@ -58,11 +62,18 @@
       animation-delay: 6s;
       width: 100px;
       height: 100px;
+
+      @media screen and (max-width: 1000px) {
+        display: none;
+      }
     }
 
     &:nth-child(8) {
       left: 70%;
       animation-delay: 8s;
+      @media screen and (max-width: 900px) {
+        animation-delay: 6s;
+      }
     }
 
     &:nth-child(9) {
@@ -70,6 +81,11 @@
       animation-delay: 6s;
       width: 90px;
       height: 90px;
+
+      @media screen and (max-width: 900px) {
+        width: 60px;
+        height: 60px;
+      }
     }
 
     &:nth-child(10) {

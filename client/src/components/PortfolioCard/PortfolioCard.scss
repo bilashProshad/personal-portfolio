@@ -14,7 +14,8 @@
     object-fit: cover;
     transition: all 0.6s ease;
     cursor: pointer;
-    filter: brightness(0.9);
+    // filter: brightness(0.9);
+    opacity: 0.6;
 
     &:hover {
       scale: 1.1;
@@ -41,6 +42,7 @@
         width: 3.2rem;
         object-fit: contain;
         cursor: pointer;
+        opacity: 1;
       }
     }
 

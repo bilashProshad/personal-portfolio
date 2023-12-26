@@ -8,12 +8,14 @@ import Navbar from "./components/Navbar/Navbar";
 import Portfolio from "./components/Portfolio/Portfolio";
 import Services from "./components/Services/Services";
 import Skills from "./components/Skills/Skills";
+import Background from "./components/Background/Background";
 
 function App() {
   const [activeLink, setActiveLink] = useState("home");
 
   return (
     <div className="App">
+      <Background />
       <Cursor />
       <Navbar activeLink={activeLink} setActiveLink={setActiveLink} />
       <Home setActiveLink={setActiveLink} />

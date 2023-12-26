@@ -8,6 +8,14 @@
   background-position: right;
   background-size: contain;
   overflow: hidden;
+  // backdrop-filter: blur(5px) saturate(180%);
+  // -webkit-backdrop-filter: blur(16px) saturate(180%);
+  // background-color: rgba(17, 25, 40, 0.75);
+  // border: 1px solid rgba(255, 255, 255, 0.125);
+  backdrop-filter: blur(8px) saturate(180%);
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  background-color: rgba(32, 39, 47, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.125);
 
   .container {
     display: flex;

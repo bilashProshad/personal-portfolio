@@ -1,11 +1,17 @@
 @import "../../App";
 
 .skills {
-  background: $bg-secondary;
+  // background: $bg-secondary;
   height: 100vh;
   // min-height: 100vh;
   padding: 9rem 0;
   overflow: hidden;
+
+  backdrop-filter: blur(8px) saturate(180%);
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  background-color: rgba(23, 28, 34, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  // border-radius: 12px;
 
   .container {
     height: 100%;

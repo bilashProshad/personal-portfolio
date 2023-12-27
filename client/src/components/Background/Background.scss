@@ -17,7 +17,7 @@
     background-color: #18191f;
     box-shadow: 0 0 50px #00bf96, 0 0 100px #00bf96, 0 0 150px #00bf96,
       0 0 200px #00bf96;
-    animation: animate 15s linear infinite;
+    animation: animate 12s linear infinite;
 
     &:nth-child(1) {
       left: 60px;
@@ -38,6 +38,9 @@
     &:nth-child(3) {
       left: 20%;
       animation-delay: 2s;
+      @media screen and (max-width: 500px) {
+        display: none;
+      }
     }
 
     &:nth-child(4) {
@@ -73,6 +76,7 @@
       animation-delay: 8s;
       @media screen and (max-width: 900px) {
         animation-delay: 6s;
+        display: none;
       }
     }
 
@@ -91,11 +95,14 @@
     &:nth-child(10) {
       left: 90%;
       animation-delay: 4s;
+      @media screen and (max-width: 650px) {
+        display: none;
+      }
     }
 
     @keyframes animate {
       0% {
-        transform: translateY(0);
+        transform: translate3d(0, 0, 0);
         opacity: 1;
       }
 
@@ -104,7 +111,7 @@
       }
 
       100% {
-        transform: translateY(-800px) rotate(360deg);
+        transform: translate3d(0, -800px, 0) rotate3d(0, 0, 1, 360deg);
         opacity: 0;
       }
     }
